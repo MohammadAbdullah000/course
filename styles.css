@@ -1,3 +1,10 @@
+.rubik {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
 /*=============== VARIABLES ===============*/
 :root {
     --header-height: 3.5rem;
@@ -278,7 +285,7 @@ a {
     color: white;
     padding: 1rem;
     border-radius: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   .footer p:nth-child(1){
     font-weight: bold;
