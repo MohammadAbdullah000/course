@@ -1,7 +1,7 @@
 .rubik {
     font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
   }
 
@@ -49,7 +49,7 @@ a {
     max-width: 100%;
     margin-inline: 1.5rem;
 }
-.aboutus-section,.features-section,.footer,.courses{
+.aboutus-section,.features-section,.courses,#contactForm{
     margin-inline: 2rem;
     
 }
@@ -215,6 +215,7 @@ a {
     border-radius: 1.5rem;
     background-color: #000000;
     color: white;
+    width: max-content;
 
 }
 
@@ -281,13 +282,13 @@ a {
 
 
   .footer{
-    background-color: #000000;
-    color: white;
-    padding: 1rem;
+    /* background-color: #000000; */
+    /* color: white; */
+    /* padding: 1rem; */
     border-radius: 1rem;
     margin-bottom: 2rem;
   }
-  .footer p:nth-child(1){
+  /* .footer p:nth-child(1){
     font-weight: bold;
     font-size: 1.5rem;
   }
@@ -295,8 +296,35 @@ a {
     font-weight: 500;
     font-size: 1.2rem;
   }
-  
+   */
 
+   .course-category{
+    display: flex;
+    justify-content: space-evenly;
+    padding:2rem;
+    margin-top: 2rem;
+    background-color: #333232;
+
+   }
+   .course-category ul p{
+    color: white;
+   }
+   .course-category li a{
+    color: white;
+   }
+   .course-category p:nth-child(1){
+    font-weight: 700;
+    font-size: 1.5rem;
+   }
+   .course-category ul li{
+    margin-block: 1rem;
+   }
+.footer p:nth-child(3){
+    background-color: #000000;
+    color: white;text-align: center;
+    margin-block: 1rem;
+    padding-block: 1rem;
+}
   .courses{
     display: flex;
     justify-content: space-between;
@@ -315,12 +343,60 @@ a {
     
   }
   .course img{
-    max-width: 300px;
+    max-width: 350px;
   }
   .course p:nth-child(2){
     font-weight: bold;
     color: rgb(12, 131, 12);
   }
+
+  .courses {
+    position: relative;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 20px; /* To prevent scrolling over the buttons */
+    gap: 20px;
+}
+
+/* .course {
+    flex: 0 0 auto;
+    width: 200px;
+    text-align: center;
+} */
+
+button {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+#scrollLeft {
+    left: -20px;
+    font-size: 2rem;
+    
+  }
+  
+  #scrollRight {
+  font-size: 2rem;
+    right: -20px;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
 
   .explore{
     margin: 2rem;
@@ -334,7 +410,110 @@ a {
         gap: 20px;
         align-items: center;
         margin-block: 2rem;
+        margin-inline: 2rem;
     
         
     }
+  }
+
+  .map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  } 
+
+  .contact-form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    text-align: center;
+  }
+  
+  /* Heading and Description */
+  .contact-form-container h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: #015bfa;
+  }
+  
+  .contact-form-container p {
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: #666;
+  }
+  
+  /* Form Styling */
+  form {
+    text-align: left;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #015bfa;
+    outline: none;
+    box-shadow: 0 0 5px rgba(1, 91, 250, 0.5);
+  }
+  
+  /* Button Styling */
+  .btn-submit {
+    display: inline-block;
+    background-color: #015bfa;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-submit:hover {
+    background-color: #0046d5;
+  }
+  
+  .btn-submit:active {
+    transform: scale(0.98);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-form-container {
+      padding: 15px 20px;
+    }
+  
+    .btn-submit {
+      width: 100%;
+    }
+  }
+  .AllRR{
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 1rem;
   }
