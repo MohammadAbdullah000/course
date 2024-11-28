@@ -304,6 +304,7 @@ a {
     padding:2rem;
     margin-top: 2rem;
     background-color: #333232;
+    flex-wrap: wrap;
 
    }
    .course-category ul p{
@@ -414,14 +415,17 @@ button {
     
         
     }
-    #scrollLeft {
+    .course-category{
+      justify-content: left;
+    }
+    /* #scrollLeft {
       display: none;
       
     }
     
     #scrollRight {
     display: none;
-  }
+  } */
   }
 
   .map-container {
