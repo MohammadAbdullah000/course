@@ -414,6 +414,14 @@ button {
     
         
     }
+    #scrollLeft {
+      display: none;
+      
+    }
+    
+    #scrollRight {
+    display: none;
+  }
   }
 
   .map-container {
