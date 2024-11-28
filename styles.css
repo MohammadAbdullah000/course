@@ -418,6 +418,13 @@ button {
     .course-category{
       justify-content: left;
     }
+    #scrollLeft{
+      font-size: 1rem;
+    }
+    #scrollRight{
+      font-size: 1rem;
+    }
+
     /* #scrollLeft {
       display: none;
       
