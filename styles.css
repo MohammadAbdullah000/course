@@ -53,6 +53,12 @@ a {
     margin-inline: 2rem;
     
 }
+@media(max-width:500px){
+  .aboutus-section,.features-section,.courses,#contactForm,.counters-section{
+    margin-inline: 1rem;
+    
+}
+}
 /*=============== HEADER & NAV ===============*/
 .header {
     position: fixed;
@@ -192,6 +198,7 @@ a {
   color: white;
   
 }
+
 
 .hero{
     height: 100vh;
@@ -334,7 +341,7 @@ a {
     background-color:#ffffff;
    } */
    .courses {
-    padding: 20px;
+    /* padding: 20px; */
     overflow-x: hidden;
 }
 .swiper-container {
@@ -350,6 +357,7 @@ a {
 .course img {
     width: 100%;
     max-width: 300px;
+    min-width: 70px;
     border-radius: 10px;
     margin-bottom: 10px;
 }
@@ -385,12 +393,33 @@ a {
     padding-block: 1rem;
 }
 @media (max-width:500px){
-  .swiper-slide p:nth-child(3){
+  .swiper-slide p:nth-child(2),.swiper-slide p:nth-child(3),.swiper-slide p:nth-child(4),.swiper-slide p:nth-child(5){
     font-size: 0.8rem;
   }
+  
   .swiper-button-next,.swiper-button-prev{
     visibility: hidden;
   }
+  .counters-section span,p{
+    font-size: 1rem;
+  }
+  .course-category p:nth-child(1){
+    font-size: 1rem;
+  }
+  .course-category li a{
+    font-size: 0.8rem;
+  }
+  .course-category ul li{
+    margin-block: 0rem;
+  }
+  .addmission-form span{
+    font-size: 0.8rem;
+  }
+  .addmission-form{
+    padding: 0.2rem 0.5rem;
+  }
+
+
 }
   .courses{
     /* display: flex;
