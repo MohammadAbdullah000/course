@@ -21,7 +21,12 @@
                     <!-- <li class="nav__item"><a href="#about-us" class="nav__link"><i class="ri-arrow-right-up-line"></i><span>About Us</span></a></li> -->
                     <li class="nav__item"><a href="#features" class="nav__link"><i class="ri-arrow-right-up-line"></i><span>Features</span></a></li>
                     <li class="nav__item"><a href="#courses" class="nav__link"><i class="ri-arrow-right-up-line"></i><span>Courses</span></a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link"><i class="ri-arrow-right-up-line"></i><span>Contact</span></a></li>
+                    <li class="nav__item">
+                        <a href="#" id="contactButton" class="nav__link">
+                          <i class="ri-arrow-right-up-line"></i>
+                          <span>Contact</span>
+                        </a>
+                      </li>
                 </ul>
                 <div class="nav__close" id="nav-close"><i class="ri-close-large-line"></i></div>
             </div>
@@ -78,6 +83,15 @@
                 </div>
             </div>
         </section>
+
+        <!-- Numbers -->
+
+        <div id="counters-section" class="counters-section" data-aos="fade-up" style="background: #fff;">
+            <div id="students" class="counter">[<span>0</span>+] <p> Students Enrolled</p> </div>
+            <div id="courses" class="counter"> [<span>0</span>+] <p>Courses Available</p> </div>
+            <div id="categories" class="counter"> [<span>0</span>+] <p>Total Categories</p></div>
+            <div id="instructors" class="counter"> [<span>0</span>+] <p>Expert Instructors</p>  </div>
+        </div>
 
         <!-- Courses Section -->
 
@@ -142,45 +156,43 @@
         </section>
 
         <!-- Contact us -->
-        <form id="contactForm">
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        <div id="contactPopup" class="popup">
+            <div class="popup-content">
+              <span id="closePopup" class="popup-close">&times;</span>
+              <form id="contactForm">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                  <label for="number">Mobile Number</label>
+                  <input type="number" id="number" name="number" placeholder="Enter your Number" required>
+                </div>
+                <div class="form-group">
+                  <label for="address">Address</label>
+                  <input id="address" name="address" placeholder="Enter Your Address" required></input>
+                </div>
+                <div class="form-group">
+                  <label for="qualification">Qualification</label>
+                  <select name="qualification" id="qualification">
+                    <option value="12th">12th</option>
+                    <option value="B.tech">Btech</option>
+                    <option value="BCom">BCom</option>
+                    <option value="BCA">BCA</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
             </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-            <div class="form-group">
-              <label for="number">Mobile Number</label>
-              <input type="number" id="number" name="number" placeholder="Enter your Number" required>
-            </div>
-            <div class="form-group">
-              <label for="address">Address</label>
-              <input id="address" name="address" placeholder="Enter Your Address" required></input>
-            </div>
-            <div class="form-group">
-              <label for="qualification">Qualification</label>
-              <select name="qualification" id="qualification">
-                <option value="12th">12th</option>
-                <option value="B.tech">Btech</option>
-                <option value="BCom">BCom</option>
-                <option value="BCA">BCA</option>
-              </select>
-            </div>
-
-            <!-- <div class="form-group">
-                <label for="CourseInterestedin">Course Interested in</label>
-                <input id="cii" name="cii" placeholder="Enter Your Address" required></input>
-              </div> -->
-            
-            <p class="cta-button" type="submit">Submit</p>
-            <!-- <button type="submit" class="btn-submit">Send Message</button> -->
-          </form>
+          </div>
             
         <!-- Map section -->
 
-        <div class="map-container">
+        <div class="map-container" data-aos="fade-in">
             <iframe
               id="gmap_canvas"
               src="https://maps.google.com/maps?ll=21.0466,75.7812&t=&z=12&ie=UTF8&iwloc=&output=embed"
@@ -195,7 +207,7 @@
 
         <!-- Footer Section -->
 
-        <section class="footer" >
+        <section class="footer" data-aos="fade-in">
             <!-- <h3>Courses</h3> -->
             <div class="course-category">
 
@@ -231,7 +243,53 @@
     <script>
         AOS.init({ duration: 1500 });
     </script>
-</body></script>
+     <script>
+      // Counter function
+function animateCounter(id, start, end, duration) {
+  const element = document.querySelector(`#${id} span`);
+  let current = start;
+  const step = Math.ceil((end - start) / (duration / 50)); // Increment value
+
+  function updateCounter() {
+    current += step;
+    if (current >= end) {
+      element.textContent = end.toLocaleString(); // Format the number
+      clearInterval(interval);
+    } else {
+      element.textContent = current.toLocaleString(); // Update text
+    }
+  }
+
+  const interval = setInterval(updateCounter, 50);
+}
+
+// IntersectionObserver to trigger animation
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Reset counters to 0 before starting animation
+        document.querySelector('#students span').textContent = '0';
+        document.querySelector('#courses span').textContent = '0';
+        document.querySelector('#categories span').textContent = '0';
+        document.querySelector('#instructors span').textContent = '0';
+
+        // Start counters when the section is visible
+        animateCounter('students', 0, 15000, 2000);
+        animateCounter('courses', 0, 120, 2000);
+        animateCounter('categories', 0, 10, 2000);
+        animateCounter('instructors', 0, 50, 2000);
+      }
+    });
+  },
+  { threshold: 0.5 } // Trigger when 50% of the section is visible
+);
+
+// Observe the counters section
+observer.observe(document.getElementById('counters-section'));
+
+      </script>
+<!-- </body></script> -->
   
 </body>
 </html>
