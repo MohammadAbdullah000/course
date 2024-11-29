@@ -1,295 +1,368 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"><link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <title>Responsive Navbar</title>
-</head>
-<body class="rubik">
-    
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">Logo</a>
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#" class="nav__link"><i class="ri-arrow-right-up-line"></i><span>Home</span></a></li>
-                    <!-- <li class="nav__item"><a href="#about-us" class="nav__link"><i class="ri-arrow-right-up-line"></i><span>About Us</span></a></li> -->
-                    <li class="nav__item"><a href="#features" class="nav__link"><i class="ri-arrow-right-up-line"></i><span>Features</span></a></li>
-                    <li class="nav__item"><a href="#courses" class="nav__link"><i class="ri-arrow-right-up-line"></i><span>Courses</span></a></li>
-                    <li class="nav__item">
-                        <a href="#" id="contactButton" class="nav__link">
-                          <i class="ri-arrow-right-up-line"></i>
-                          <span>Contact</span>
-                        </a>
-                      </li>
-                </ul>
-                <div class="nav__close" id="nav-close"><i class="ri-close-large-line"></i></div>
-            </div>
-            <div class="nav__toggle" id="nav-toggle"><i class="ri-menu-line"></i></div>
-        </nav>
-    </header>
-    <main>
-        <!-- Hero section -->
-        <section class="hero" data-aos="fade-in">
-            <div class="hero-heading">
-                <h1>Unlock Your Potential with Expert-Led Online Courses</h1>
-                <p>Learn anytime, anywhere with courses designed for every level and interest. Build skills, grow your career, or pursue your passions today.</p>
-            </div>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+      <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-            <div class="cta-button" >
-                <p><i class="ri-arrow-right-up-line"></i>Browse Courses</p>
-            </div>
-        </section>
-        <!-- About Us section -->
-         <!-- <section class="aboutus-section" data-aos="fade-up">
-            <h1>Empowering Learners Worldwide</h1>
-            <p>We are dedicated to providing high-quality online courses for every learner. At [Your Website Name], we believe in the power of education to transform lives. Our mission is to make high-quality learning accessible to everyone. From career advancement to personal growth, our courses are designed to help you achieve your goals</p>
-         </section> -->
-        <!-- Features section -->
-        <section class="features-section" id="features">
-            <h1 data-aos="fade-up">Features</h1>
-            <div data-aos="fade-up" class="features-container">
-                <div data-aos="fade-up" class="feature">
-                    <div data-aos="fade-in" class="feature-img">
-                        <img src="/images/male.png" alt="Flexible Learning">
-                    </div>
-                    <p data-aos="fade-in" class="feature-title">Flexible Learning</p>
-                    <p data-aos="fade-in" class="feature-description">
-                        Learn at your own pace, with lifetime access to course materials.
-                    </p>
-                </div>
-                <div data-aos="fade-up" class="feature">
-                    <div data-aos="fade-in" class="feature-img">
-                        <img src="/images/webinar.png" alt="Certified Instructors">
-                    </div>
-                    <p data-aos="fade-in" class="feature-title">Certified Instructors</p>
-                    <p data-aos="fade-in" class="feature-description">
-                        Gain knowledge from industry experts and professionals.
-                    </p>
-                </div>
-                <div data-aos="fade-up" class="feature">
-                    <div data-aos="fade-in" class="feature-img">
-                        <img src="/images/community.png" alt="Global Community">
-                    </div>
-                    <p data-aos="fade-in" class="feature-title">Global Community</p>
-                    <p data-aos="fade-in" class="feature-description">
-                        Join a network of learners from around the world.
-                    </p>
-                </div>
-            </div>
-        </section>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-        <!-- Numbers -->
-
-        <div id="counters-section" class="counters-section" data-aos="fade-up" style="background: #fff;">
-            <div id="students" class="counter">[<span>0</span>+] <p> Students Enrolled</p> </div>
-            <div id="courses" class="counter"> [<span>0</span>+] <p>Courses Available</p> </div>
-            <div id="categories" class="counter"> [<span>0</span>+] <p>Total Categories</p></div>
-            <div id="instructors" class="counter"> [<span>0</span>+] <p>Expert Instructors</p>  </div>
+      <title>Responsive Navbar</title>
+  </head>
+  <body class="rubik">
+      
+      <header class="header" id="header">
+        <div class="addmission-form">
+            <a href="#" id="addmissionButton">
+                <span>Addmission </span>
+                
+              </a>
+            <!-- <a href="#" id="addmissionButton">
+                <span>Contact</span>
+                
+              </a> -->
         </div>
+          <nav class="nav container">
+              <a href="#" class="nav__logo">Logo</a>
+              <div class="nav__menu" id="nav-menu">
+                  <ul class="nav__list">
+                      <li class="nav__item"><a href="#" class="nav__link"><i class="ri-arrow-right-up-line"></i><span>Home</span></a></li>
+                      <!-- <li class="nav__item"><a href="#about-us" class="nav__link"><i class="ri-arrow-right-up-line"></i><span>About Us</span></a></li> -->
+                      <li class="nav__item"><a href="#features" class="nav__link"><i class="ri-arrow-right-up-line"></i><span>Features</span></a></li>
+                      <li class="nav__item"><a href="#courses" class="nav__link"><i class="ri-arrow-right-up-line"></i><span>Courses</span></a></li>
+                      <!-- <li class="nav__item">
+                          <a href="#" id="contactButton" class="nav__link">
+                            <i class="ri-arrow-right-up-line"></i>
+                            <span>Contact</span>
+                          </a>
+                        </li> -->
+                  </ul>
+                  <div class="nav__close" id="nav-close"><i class="ri-close-large-line"></i></div>
+              </div>
+              <div class="nav__toggle" id="nav-toggle"><i class="ri-menu-line"></i></div>
+          </nav>
+      </header>
+      <main>
+          <!-- Hero section -->
+          <section class="hero" data-aos="fade-in">
+              <div class="hero-heading">
+                  <h1>Unlock Your Potential with Expert-Led Online Courses</h1>
+                  <p>Learn anytime, anywhere with courses designed for every level and interest. Build skills, grow your career, or pursue your passions today.</p>
+              </div>
 
-        <!-- Courses Section -->
+              <div class="cta-button" >
+                  <p><i class="ri-arrow-right-up-line"></i>Browse Courses</p>
+              </div>
+          </section>
+          <!-- About Us section -->
+          <!-- <section class="aboutus-section" data-aos="fade-up">
+              <h1>Empowering Learners Worldwide</h1>
+              <p>We are dedicated to providing high-quality online courses for every learner. At [Your Website Name], we believe in the power of education to transform lives. Our mission is to make high-quality learning accessible to everyone. From career advancement to personal growth, our courses are designed to help you achieve your goals</p>
+          </section> -->
+          <!-- Features section -->
+          <section class="features-section" id="features">
+              <h1 data-aos="fade-up">Features</h1>
+              <div data-aos="fade-up" class="features-container">
+                  <div data-aos="fade-up" class="feature">
+                      <div data-aos="fade-in" class="feature-img">
+                          <img src="/images/male.png" alt="Flexible Learning">
+                      </div>
+                      <p data-aos="fade-in" class="feature-title">Flexible Learning</p>
+                      <p data-aos="fade-in" class="feature-description">
+                          Learn at your own pace, with lifetime access to course materials.
+                      </p>
+                  </div>
+                  <div data-aos="fade-up" class="feature">
+                      <div data-aos="fade-in" class="feature-img">
+                          <img src="/images/webinar.png" alt="Certified Instructors">
+                      </div>
+                      <p data-aos="fade-in" class="feature-title">Certified Instructors</p>
+                      <p data-aos="fade-in" class="feature-description">
+                          Gain knowledge from industry experts and professionals.
+                      </p>
+                  </div>
+                  <div data-aos="fade-up" class="feature">
+                      <div data-aos="fade-in" class="feature-img">
+                          <img src="/images/community.png" alt="Global Community">
+                      </div>
+                      <p data-aos="fade-in" class="feature-title">Global Community</p>
+                      <p data-aos="fade-in" class="feature-description">
+                          Join a network of learners from around the world.
+                      </p>
+                  </div>
+              </div>
+          </section>
 
-        <h1 data-aos="fade-up" class="explore">Explore Our Popular Courses</h1>
-        <section class="courses" id="courses" data-aos="fade-up">
-            <div class="scroll-container">
-                <div class="course">
-                    <img src="https://plus.unsplash.com/premium_photo-1681248156500-8f209e8e466e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y291cnNlfGVufDB8fDB8fHww" alt="">
-                    <p>Andrew</p>
-                    <p>HTML, CSS and Javascript</p>
-                    <p>4.3</p>
-                    <p>$1500</p>
-                </div>
-                <div class="course">
-                    <img src="https://plus.unsplash.com/premium_photo-1681248156500-8f209e8e466e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y291cnNlfGVufDB8fDB8fHww" alt="">
-                    <p>Andrew</p>
-                    <p>HTML, CSS and Javascript</p>
-                    <p>4.3</p>
-                    <p>$1500</p>
-                </div>
-                <div class="course">
-                    <img src="https://plus.unsplash.com/premium_photo-1681248156500-8f209e8e466e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y291cnNlfGVufDB8fDB8fHww" alt="">
-                    <p>Andrew</p>
-                    <p>HTML, CSS and Javascript</p>
-                    <p>4.3</p>
-                    <p>$1500</p>
-                </div>
-                <div class="course">
-                    <img src="https://plus.unsplash.com/premium_photo-1681248156500-8f209e8e466e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y291cnNlfGVufDB8fDB8fHww" alt="">
-                    <p>Andrew</p>
-                    <p>HTML, CSS and Javascript</p>
-                    <p>4.3</p>
-                    <p>$1500</p>
-                </div>
-                <div class="course">
-                    <img src="https://plus.unsplash.com/premium_photo-1681248156500-8f209e8e466e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y291cnNlfGVufDB8fDB8fHww" alt="">
-                    <p>Andrew</p>
-                    <p>HTML, CSS and Javascript</p>
-                    <p>4.3</p>
-                    <p>$1500</p>
-                </div>
-                <div class="course">
-                    <img src="https://plus.unsplash.com/premium_photo-1681248156500-8f209e8e466e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y291cnNlfGVufDB8fDB8fHww" alt="">
-                    <p>Andrew</p>
-                    <p>HTML, CSS and Javascript</p>
-                    <p>4.3</p>
-                    <p>$1500</p>
-                </div>
-                <div class="course">
-                    <img src="https://plus.unsplash.com/premium_photo-1681248156500-8f209e8e466e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y291cnNlfGVufDB8fDB8fHww" alt="">
-                    <p>Andrew</p>
-                    <p>Andrew</p>
-                    <p>HTML, CSS and Javascript</p>
-                    <p>4.3</p>
-                    <p>$1500</p>
-                </div>
-            </div>
-            
-            <!-- Buttons to scroll left and right -->
-            <button id="scrollLeft"><i class="ri-arrow-left-line"></i></button>
-            <button id="scrollRight"><i class="ri-arrow-right-line"></i></button>
-        </section>
+          <!-- Numbers -->
 
-        <!-- Contact us -->
-        <div id="contactPopup" class="popup">
-            <div class="popup-content">
-              <span id="closePopup" class="popup-close">&times;</span>
-              <form id="contactForm">
-                <div class="form-group">
-                  <label for="name">Full Name</label>
-                  <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                </div>
-                <div class="form-group">
-                  <label for="email">Email Address</label>
-                  <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="form-group">
-                  <label for="number">Mobile Number</label>
-                  <input type="number" id="number" name="number" placeholder="Enter your Number" required>
-                </div>
-                <div class="form-group">
-                  <label for="address">Address</label>
-                  <input id="address" name="address" placeholder="Enter Your Address" required></input>
-                </div>
-                <div class="form-group">
-                  <label for="qualification">Qualification</label>
-                  <select name="qualification" id="qualification">
-                    <option value="12th">12th</option>
-                    <option value="B.tech">Btech</option>
-                    <option value="BCom">BCom</option>
-                    <option value="BCA">BCA</option>
-                  </select>
-                </div>
-                <button type="submit" class="btn-submit">Submit</button>
-            </form>
-            </div>
-          </div>
-            
-        <!-- Map section -->
-
-        <div class="map-container" data-aos="fade-in">
-            <iframe
-              id="gmap_canvas"
-              src="https://maps.google.com/maps?ll=21.0466,75.7812&t=&z=12&ie=UTF8&iwloc=&output=embed"
-              width="90%"
-              height="510"
-              frameborder="0"
-              scrolling="no"
-              marginheight="0"
-              marginwidth="0"
-            ></iframe>
+          <div id="counters-section" class="counters-section" data-aos="fade-up" style="background: #fff;">
+              <div id="students" class="counter">[<span>0</span>+] <p> Students Enrolled</p> </div>
+              <div id="courses" class="counter"> [<span>0</span>+] <p>Courses Available</p> </div>
+              <div id="categories" class="counter"> [<span>0</span>+] <p>Total Categories</p></div>
+              <div id="instructors" class="counter"> [<span>0</span>+] <p>Expert Instructors</p>  </div>
           </div>
 
-        <!-- Footer Section -->
+          <!-- Courses Section -->
 
-        <section class="footer" data-aos="fade-in">
-            <!-- <h3>Courses</h3> -->
-            <div class="course-category">
+          <h1 data-aos="fade-up" class="explore">Explore Our Popular Courses</h1>
+          <section class="courses" id="courses" data-aos="fade-up">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide course">
+                        <img src="https://plus.unsplash.com/premium_photo-1681248156500-8f209e8e466e?w=500&auto=format&fit=crop&q=60" alt="">
+                        <p>Andrew</p>
+                        <p>HTML, CSS and Javascript</p>
+                        <p>4.3</p>
+                        <p>$1500</p>
+                    </div>
+                    <div class="swiper-slide course">
+                        <img src="https://plus.unsplash.com/premium_photo-1681248156500-8f209e8e466e?w=500&auto=format&fit=crop&q=60" alt="">
+                        <p>Andrew</p>
+                        <p>HTML, CSS and Javascript</p>
+                        <p>4.3</p>
+                        <p>$1500</p>
+                    </div>
+                    <div class="swiper-slide course">
+                        <img src="https://plus.unsplash.com/premium_photo-1681248156500-8f209e8e466e?w=500&auto=format&fit=crop&q=60" alt="">
+                        <p>Andrew</p>
+                        <p>HTML, CSS and Javascript</p>
+                        <p>4.3</p>
+                        <p>$1500</p>
+                    </div>
+                    <div class="swiper-slide course">
+                        <img src="https://plus.unsplash.com/premium_photo-1681248156500-8f209e8e466e?w=500&auto=format&fit=crop&q=60" alt="">
+                        <p>Andrew</p>
+                        <p>HTML, CSS and Javascript</p>
+                        <p>4.3</p>
+                        <p>$1500</p>
+                    </div>
+                    <div class="swiper-slide course">
+                        <img src="https://plus.unsplash.com/premium_photo-1681248156500-8f209e8e466e?w=500&auto=format&fit=crop&q=60" alt="">
+                        <p>Andrew</p>
+                        <p>HTML, CSS and Javascript</p>
+                        <p>4.3</p>
+                        <p>$1500</p>
+                    </div>
+                    <div class="swiper-slide course">
+                        <img src="https://plus.unsplash.com/premium_photo-1681248156500-8f209e8e466e?w=500&auto=format&fit=crop&q=60" alt="">
+                        <p>Andrew</p>
+                        <p>HTML, CSS and Javascript</p>
+                        <p>4.3</p>
+                        <p>$1500</p>
+                    </div>
+                    <div class="swiper-slide course">
+                        <img src="https://plus.unsplash.com/premium_photo-1681248156500-8f209e8e466e?w=500&auto=format&fit=crop&q=60" alt="">
+                        <p>Andrew</p>
+                        <p>HTML, CSS and Javascript</p>
+                        <p>4.3</p>
+                        <p>$1500</p>
+                    </div>
+                    <!-- Add more slides as needed -->
+                </div>
+                <!-- Swiper navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+        
 
-                <ul>
-                    <p>Mechanical</p>
-                    <li><a href="#">Thermodynamics and Heat Transfer</a></li>
-                    <li><a href="#">Fluid Mechanics</a></li>
-                    <li><a href="#">Machine Design</a></li>                
-                </ul>
-                <ul>
-                    <p>Computer</p>
-                    <li><a href="#">Programming Fundamentals (Python, Java, C++)</a></li>
-                    <li><a href="#">Data Structures and Algorithms</a></li>
-                    <li><a href="#">Database Management Systems (SQL, NoSQL)</a></li>                
-                </ul>
-                <ul>
-                    <p>Civil</p>
-                    <li><a href="#">Structural Analysis</a></li>
-                    <li><a href="#">Construction Materials and Techniques</a></li>
-                    <li><a href="#">Hydraulics and Water Resources Engineering</a></li>                
-                </ul>
-                
-                
+          <!-- Contact us -->
+          <div id="contactPopup" class="popup">
+              <div class="popup-content">
+                <span id="closePopup" class="popup-close">&times;</span>
+                <form id="addmissionForm">
+                  <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="number">Mobile Number</label>
+                    <input type="number" id="number" name="number" placeholder="Enter your Number" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="address">Address</label>
+                    <input id="address" name="address" placeholder="Enter Your Address" required></input>
+                  </div>
+                  <div class="form-group">
+                    <label for="qualification">Qualification</label>
+                    <select name="qualification" id="qualification">
+                      <option value="12th">12th</option>
+                      <option value="B.tech">Btech</option>
+                      <option value="BCom">BCom</option>
+                      <option value="BCA">BCA</option>
+                    </select>
+                  </div>
+                  <button type="submit" class="btn-submit">Submit</button>
+              </form>
+              </div>
+            </div>
+              
+          <!-- Map section -->
+
+          <div class="map-container" data-aos="fade-in">
+              <iframe
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?ll=21.0466,75.7812&t=&z=12&ie=UTF8&iwloc=&output=embed"
+                width="90%"
+                height="510"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+              ></iframe>
             </div>
 
-            <p class="AllRR">Inonvation Limited | All Right Rreserved | Privacy Policy</p>
-        </section>
-    
-    </main>
-</div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="script.js"></script>
-    <script>
-        AOS.init({ duration: 1500 });
-    </script>
-     <script>
-      // Counter function
-function animateCounter(id, start, end, duration) {
-  const element = document.querySelector(`#${id} span`);
-  let current = start;
-  const step = Math.ceil((end - start) / (duration / 50)); // Increment value
+          <!-- Footer Section -->
 
-  function updateCounter() {
-    current += step;
-    if (current >= end) {
-      element.textContent = end.toLocaleString(); // Format the number
-      clearInterval(interval);
-    } else {
-      element.textContent = current.toLocaleString(); // Update text
-    }
+          <section class="footer" data-aos="fade-in">
+              <!-- <h3>Courses</h3> -->
+              <div class="course-category">
+
+                  <ul>
+                      <p>Mechanical</p>
+                      <li><a href="#">Thermodynamics and Heat Transfer</a></li>
+                      <li><a href="#">Fluid Mechanics</a></li>
+                      <li><a href="#">Machine Design</a></li>                
+                  </ul>
+                  <ul>
+                      <p>Computer</p>
+                      <li><a href="#">Programming Fundamentals (Python, Java, C++)</a></li>
+                      <li><a href="#">Data Structures and Algorithms</a></li>
+                      <li><a href="#">Database Management Systems (SQL, NoSQL)</a></li>                
+                  </ul>
+                  <ul>
+                      <p>Civil</p>
+                      <li><a href="#">Structural Analysis</a></li>
+                      <li><a href="#">Construction Materials and Techniques</a></li>
+                      <li><a href="#">Hydraulics and Water Resources Engineering</a></li>                
+                  </ul>
+                  
+                  
+              </div>
+
+              <p class="AllRR">Inonvation Limited | All Right Rreserved | Privacy Policy</p>
+          </section>
+      
+      </main>
+  </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+      <script src="script.js"></script>
+      <script>
+          AOS.init({ duration: 1500 });
+      </script>
+      <script>
+        const addmissionButton = document.getElementById('addmissionButton');
+const contactPopup = document.getElementById('contactPopup');
+const closePopup = document.getElementById('closePopup');
+
+// Open the popup
+addmissionButton.addEventListener('click', (e) => {
+  e.preventDefault(); // Prevent default link behavior
+  contactPopup.style.display = 'flex';
+});
+
+// Close the popup
+closePopup.addEventListener('click', () => {
+  contactPopup.style.display = 'none';
+});
+
+// Close the popup when clicking outside the content
+window.addEventListener('click', (e) => {
+  if (e.target === contactPopup) {
+    contactPopup.style.display = 'none';
   }
-
-  const interval = setInterval(updateCounter, 50);
-}
-
-// IntersectionObserver to trigger animation
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        // Reset counters to 0 before starting animation
-        document.querySelector('#students span').textContent = '0';
-        document.querySelector('#courses span').textContent = '0';
-        document.querySelector('#categories span').textContent = '0';
-        document.querySelector('#instructors span').textContent = '0';
-
-        // Start counters when the section is visible
-        animateCounter('students', 0, 15000, 2000);
-        animateCounter('courses', 0, 120, 2000);
-        animateCounter('categories', 0, 10, 2000);
-        animateCounter('instructors', 0, 50, 2000);
-      }
-    });
-  },
-  { threshold: 0.5 } // Trigger when 50% of the section is visible
-);
-
-// Observe the counters section
-observer.observe(document.getElementById('counters-section'));
+});
 
       </script>
-<!-- </body></script> -->
-  
-</body>
-</html>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            new Swiper('.swiper-container', {
+                slidesPerView: 3, // Number of courses visible at a time
+                spaceBetween: 30, // Space between slides
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                },
+            });
+        });
+    </script>
+    
+      <script>
+        // Counter function
+  function animateCounter(id, start, end, duration) {
+    const element = document.querySelector(`#${id} span`);
+    let current = start;
+    const step = Math.ceil((end - start) / (duration / 50)); // Increment value
+
+    function updateCounter() {
+      current += step;
+      if (current >= end) {
+        element.textContent = end.toLocaleString(); // Format the number
+        clearInterval(interval);
+      } else {
+        element.textContent = current.toLocaleString(); // Update text
+      }
+    }
+
+    const interval = setInterval(updateCounter, 50);
+  }
+
+  // IntersectionObserver to trigger animation
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Reset counters to 0 before starting animation
+          document.querySelector('#students span').textContent = '0';
+          document.querySelector('#courses span').textContent = '0';
+          document.querySelector('#categories span').textContent = '0';
+          document.querySelector('#instructors span').textContent = '0';
+
+          // Start counters when the section is visible
+          animateCounter('students', 0, 15000, 2000);
+          animateCounter('courses', 0, 120, 2000);
+          animateCounter('categories', 0, 10, 2000);
+          animateCounter('instructors', 0, 50, 2000);
+        }
+      });
+    },
+    { threshold: 0.5 } // Trigger when 50% of the section is visible
+  );
+
+  // Observe the counters section
+  observer.observe(document.getElementById('counters-section'));
+
+        </script>
+  <!-- </body></script> -->
+    
+  </body>
+  </html>
